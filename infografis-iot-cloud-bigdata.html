@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infografis: IoT, Cloud Computing, dan Big Data dalam Sistem Informasi</title>
+<style>
+  :root {
+    --teks: #1f2933;
+    --redup: #52606d;
+    --garis: #cbd2d9;
+    --latar: #f5f7fa;
+    --biru: #1d5fa8;
+    --biru-muda: #e3eefa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", Arial, sans-serif;
+    color: var(--teks);
+    background: var(--latar);
+    line-height: 1.6;
+  }
+  .halaman { max-width: 900px; margin: 0 auto; padding: 24px 16px 40px; }
+
+  header { background: var(--biru); color: #fff; padding: 28px 24px; border-radius: 8px; }
+  header h1 { font-size: 1.6rem; line-height: 1.3; margin-bottom: 8px; }
+  header p { font-size: 0.95rem; }
+
+  section { background: #fff; border: 1px solid var(--garis); border-radius: 8px; padding: 20px; margin-top: 20px; }
+  h2 { font-size: 1.2rem; color: var(--biru); margin-bottom: 6px; }
+  .pengantar { color: var(--redup); margin-bottom: 16px; }
+
+  /* alur 3 komponen menuju SI */
+  .alur { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+  .kotak { flex: 1 1 180px; border: 1px solid var(--garis); border-radius: 6px; padding: 14px; background: var(--latar); }
+  .kotak h3 { font-size: 1.05rem; margin-bottom: 4px; }
+  .kotak .peran { font-weight: 700; color: var(--biru); font-size: 0.9rem; margin-bottom: 8px; }
+  .kotak p { font-size: 0.9rem; margin-bottom: 6px; }
+  .panah { align-self: center; font-size: 1.4rem; color: var(--biru); }
+  .kotak.si { background: var(--biru-muda); border-color: var(--biru); }
+
+  /* contoh kasus */
+  .langkah { list-style: none; counter-reset: l; }
+  .langkah li { counter-increment: l; position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid var(--garis); }
+  .langkah li:last-child { border-bottom: none; }
+  .langkah li::before {
+    content: counter(l);
+    position: absolute; left: 0; top: 10px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--biru); color: #fff; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .langkah strong { display: block; }
+
+  /* tabel keterkaitan */
+  .tabel-bungkus { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { border: 1px solid var(--garis); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--biru-muda); }
+
+  .kesimpulan { background: var(--biru-muda); border-color: var(--biru); }
+  footer { text-align: center; color: var(--redup); font-size: 0.85rem; margin-top: 20px; }
+
+  @media (max-width: 600px) { .panah { transform: rotate(90deg); width: 100%; text-align: center; } }
+</style>
+</head>
+<body>
+<div class="halaman">
+
+  <header>
+    <h1>Keterkaitan IoT, Cloud Computing, dan Big Data dalam Mendukung Sistem Informasi</h1>
+    <p>Nama: M. Rayhan Fathurrahman &nbsp;|&nbsp; NIM: 2604060036 &nbsp;|&nbsp; Kelas: 1B<br>
+       Mata kuliah: Konsep Sistem Informasi &nbsp;|&nbsp; Prodi Sistem Informasi</p>
+  </header>
+
+  <section>
+    <h2>Gambaran umum</h2>
+    <p class="pengantar">Sistem informasi butuh data yang akurat dan cepat untuk membantu mengambil keputusan. Tiga teknologi di bawah ini bekerja berurutan untuk menyediakan data itu.</p>
+
+    <div class="alur">
+      <div class="kotak">
+        <h3>IoT</h3>
+        <div class="peran">Mengumpulkan data</div>
+        <p>Perangkat dan sensor yang tersambung internet membaca kondisi di lapangan, misalnya suhu, lokasi, dan getaran.</p>
+        <p><em>Keterbatasan:</em> memori kecil, jadi tidak bisa menyimpan data dalam jumlah besar.</p>
+      </div>
+      <div class="panah">&rarr;</div>
+      <div class="kotak">
+        <h3>Cloud Computing</h3>
+        <div class="peran">Menyimpan dan menampung data</div>
+        <p>Data dari banyak sensor dikirim ke server di internet. Kapasitasnya bisa ditambah sesuai kebutuhan.</p>
+        <p><em>Keterbatasan:</em> hanya menyimpan, belum menjelaskan arti data.</p>
+      </div>
+      <div class="panah">&rarr;</div>
+      <div class="kotak">
+        <h3>Big Data</h3>
+        <div class="peran">Menganalisis data</div>
+        <p>Data yang jumlahnya sangat besar dianalisis untuk menemukan pola atau memprediksi sesuatu.</p>
+        <p><em>Keterbatasan:</em> butuh data yang terus masuk dan tempat penyimpanan yang besar.</p>
+      </div>
+      <div class="panah">&rarr;</div>
+      <div class="kotak si">
+        <h3>Sistem Informasi</h3>
+        <div class="peran">Menyajikan hasil untuk keputusan</div>
+        <p>Hasil analisis ditampilkan dalam bentuk laporan, dashboard, atau peringatan sehingga pengguna bisa bertindak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contoh: pengiriman vaksin yang harus tetap dingin</h2>
+    <p class="pengantar">Vaksin harus disimpan pada suhu sekitar -20&deg;C selama perjalanan. Jika suhu naik, vaksin bisa rusak.</p>
+    <ol class="langkah">
+      <li><strong>IoT: sensor membaca suhu</strong>Sensor di dalam kontainer mengukur suhu secara terus-menerus. Misalnya suhu naik dari -20&deg;C menjadi -12&deg;C.</li>
+      <li><strong>Cloud: data dikirim dan disimpan</strong>Data suhu dikirim lewat internet ke cloud dan disimpan, sehingga bisa dilihat dari kantor pusat.</li>
+      <li><strong>Big Data: data dianalisis</strong>Data suhu dari banyak kontainer dibandingkan dengan data sebelumnya. Hasilnya berupa perkiraan bahwa vaksin bisa rusak jika suhu terus naik.</li>
+      <li><strong>Sistem Informasi: hasil ditampilkan</strong>Dashboard menampilkan peringatan ke petugas. Petugas menaikkan pendingin atau mengalihkan truk ke gudang terdekat.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Mengapa ketiganya saling berkaitan</h2>
+    <div class="tabel-bungkus">
+      <table>
+        <tr><th>Jika tidak ada</th><th>Akibatnya pada sistem informasi</th></tr>
+        <tr><td>IoT</td><td>Tidak ada data langsung dari lapangan, jadi data harus dicatat manual dan sering terlambat.</td></tr>
+        <tr><td>Cloud Computing</td><td>Data dari sensor tidak punya tempat penyimpanan bersama dan mudah hilang atau terpencar.</td></tr>
+        <tr><td>Big Data</td><td>Data hanya menumpuk dan tidak bisa dijadikan prediksi atau dasar keputusan.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="kesimpulan">
+    <h2>Kesimpulan</h2>
+    <p>IoT mengumpulkan data, cloud computing menyimpannya, dan big data menganalisisnya. Hasil akhirnya ditampilkan oleh sistem informasi untuk membantu pengambilan keputusan. Jika salah satu tidak ada, alurnya terputus dan sistem informasi tidak mendapat data yang berguna.</p>
+  </section>
+
+  <footer>Tugas nomor 5 &bull; M. Rayhan Fathurrahman</footer>
+</div>
+</body>
+</html>
